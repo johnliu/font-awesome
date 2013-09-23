@@ -1,11 +1,11 @@
 default: data
-	@mkdir -p css font scss less
+	@mkdir -p css fonts scss less
 	@cd $< && git pull
 	@cp -f $</css/* ./css
-	@cp -f $</font/* ./font
+	@cp -f $</fonts/* ./fonts
 	@cp -f $</scss/* ./scss
 	@cp -f $</less/* ./less
-	@du -bh css* font* scss* less*
+	@du -bh css* fonts* scss* less*
 
 data:
 	@git clone https://github.com/FortAwesome/Font-Awesome.git $@
